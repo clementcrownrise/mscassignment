@@ -55,3 +55,28 @@ class ShoppingCart {
     console.log("-----------------------------");
   }
 }
+
+
+// 1. Create Products
+const laptop = new Product(101, "MacBook Pro", 1999.99);
+const mouse = new Product(102, "Magic Mouse", 79.00);
+const keyboard = new Product(103, "Mechanical Keyboard", 150.00);
+
+// 2. Create a Shopping Cart
+const myCart = new ShoppingCart();
+
+// 3. Add items to the cart
+myCart.addItem(laptop, 1);
+myCart.addItem(mouse, 2);
+myCart.addItem(keyboard, 1);
+
+// 4. Display the cart
+console.log("Initial Cart:");
+myCart.displayCart();
+
+// 5. Remove an item (Removing the Mouse)
+console.log("Removing the mouse...");
+myCart.removeItem(102);
+
+// Display the cart again to verify
+myCart.displayCart();
